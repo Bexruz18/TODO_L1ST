@@ -1,0 +1,120 @@
+body {
+  background: url(https://thumbs.dreamstime.com/b/to-do-list-all-tasks-completed-ticked-off-53700766.jpg);
+  height: 100vh;
+  background-position: -2%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 50px;
+  min-width: 100px;
+}
+
+.box{
+  background: rgba(129,129,129,0.8);
+  width: 100%;
+  float: left;
+  padding: 102px 0px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 40px;
+}
+.todo.input{
+  display:flex;
+  justify-content:center;
+}
+
+ul li {
+  list-style-type: none;
+  font-family: Monotype Corsiva;
+  left: 187px;
+  width: 798px;
+  position: relative;
+  background: #eee;
+  font-size: 28px;
+}
+
+ul li:nth-child(odd) {
+  background: #f9f9f9;
+}
+
+ul li:hover {
+  background: #ddd;
+}
+
+ul li.checked {
+  font-family: Monotype Corsiva;
+  text-decoration: line-through;
+}
+
+ul li.checked::before {
+  border-color: #00ff00;
+  top: 10px;
+  left: 16px;
+  height: 15px;
+  width: 7px;
+}
+
+input {
+  height: 10px;
+  border: none;
+  border-radius: 0;
+  width: 55%;
+  padding: 13px;
+  float: left;
+  font-size: 16px;
+}
+
+.addBtn {
+  height: 37px;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background: #d9d9d9;
+  color: #555;
+  float: left;
+  text-align: center;
+  font-size: 15px;
+}
+
+
+.addBtn:hover {
+  background-color: #00ff00;
+}
+
+.taskText {
+  color: black;
+}
+
+.taskText_closed{
+  text-decoration: line-through;
+}
+
+.taskText_checked{
+  color: green;
+}
+
+a{
+  text-decoration: none;
+}
+
+.ui.negative.basic.button{
+  padding: 10px;
+  font-family: Times New Roman;
+}
+
+.ui.negative.basic.button:hover{
+  background-color: red;
+}
+
+.ui.segment{
+  margin-left: auto;
+  margin-right: auto;
+  width: 77em;
+}
+
+.ui.big.header{
+  display:flex;
+  justify-content:space-between;
+  align-items: center;
+}

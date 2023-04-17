@@ -1,0 +1,35 @@
+{% extends 'todo/layout.html' %}
+
+{% block content %}
+<div class="box">
+  <form class="ui form" id="addTaskForm" action="/add" method="post">
+    <h1>Списки Дел</h1>
+    <div class="todo input">
+      <input name="title" type="text" id="taskText" placeholder="Введите задачу...">
+      <button class="addBtn" type="submit">Добавить</button>
+    </div>
+  </form>
+
+  <ul class="ui segment"  id="myUL" >
+    {% for todo in todo_list %}
+    <li class="ui big header">
+
+      {% if todo.is_complete == False %}
+
+      <a class="ui primary basic button" href="/update/{{ todo.id }}">
+        <span class="taskText"> №{{ todo.id }} {{ todo.title }}</span>
+      </a>
+      {% else %}
+      <span class="taskText_checked">&#10003;</span>
+      <a class="ui blue button" href="/update/{{ todo.id }}">
+        <span class="taskText taskText_closed"> №{{ todo.id }} {{ todo.title }}</span>
+      </a>
+      {% endif %}
+      <a class="ui negative basic button" href="/delete/{{ todo.id }}">X</a>
+    </li>
+
+    {% endfor %}
+
+  </ul>
+</div>
+{% endblock content %}
